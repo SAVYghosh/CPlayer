@@ -1,0 +1,38 @@
+version: '3.2'
+services:
+  user-app:
+   image: sourav123456789/cplayer:user-app
+   restart: always
+   network_mode: host
+   ports:
+     - 8095:8095
+   expose:
+     - 8095
+   depends_on:
+     - cplayer-mysql
+  cplayer-app:
+   image: sourav123456789/cplayer:cplayer-app
+   restart: always
+   network_mode: host
+   ports:
+     - 8085:8085
+   expose:
+     - 8085
+   depends_on:
+     - cplayer-mysql
+
+  cplayer-mysql:
+   image: mysql:5.5
+   network_mode: host
+   ports:
+     - "3306:3306"
+   environment:
+     MYSQL_ROOT_PASSWORD: root
+     MYSQL_DATABASE: cplayerdb
+     
+  angular:
+    image: sourav123456789/cplayer:angular-app
+    network_mode: host
+    container_name: angular-docker
+    ports:
+      - 4200:4200

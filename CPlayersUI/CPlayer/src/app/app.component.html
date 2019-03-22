@@ -1,0 +1,14 @@
+
+<mat-toolbar  color="primary" *ngIf="router.url !='/register' && router.url != '/login'" >
+    <span> CPlayer</span>
+    <button id="search" class="search-button" mat-button [routerLink]="['/players/search']">Search</button>
+
+    <button id="favlist" mat-button [routerLink]="['/players/FavList']">My Player</button>
+    <span class="spacer"></span>
+    <button mat-button (click)="logout()">Logout</button>
+
+</mat-toolbar>
+
+
+  
+<router-outlet></router-outlet>

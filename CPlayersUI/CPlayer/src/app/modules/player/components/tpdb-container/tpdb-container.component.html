@@ -1,0 +1,209 @@
+<button  id="back" [routerLink]="['/players/search']" mat-button  style="padding:5px" class="back-block ">
+  <span style="font-size:28px; color:blue">Go Back </span>
+  <i class="material-icons" style="font-size:38px;color:rgb(46, 30, 189)">restore</i>
+</button>
+
+<div class="player-container ">
+
+
+
+       <mat-card class="player-thumbnail1" >
+          <img src="{{playerDetail.imageURL}}" style="width:150px;height:150px" alt="Could Not load Image">
+          <mat-card-title>
+              <h3> {{playerDetail.name }} </h3>
+              <h5>FullName : <span>{{playerDetail.fullName}}</span></h5>
+          </mat-card-title>
+          <mat-card-content>
+              <span>
+                  <h5>FullName : <span class="">{{playerDetail.fullName}}</span></h5>
+                </span>
+                <span>
+                  <h5>Teams : <span class="">{{playerDetail.majorTeams}}</span></h5>
+                </span>
+                <span>
+                  <h5>Country :<span class=""> {{playerDetail.country}}</span></h5>
+                </span>
+                <span>
+                  <h5>PlayingRole : <span class="">{{playerDetail.playingRole}}</span></h5>
+                </span>
+                <span>
+                  <h5>Born :<span class="">{{playerDetail.born}}</span></h5>
+                </span>
+                <span>
+                  <h5>BattingStyle :<span class=""> {{playerDetail.battingStyle}}</span></h5>
+                </span>
+                <span>
+                  <h5>BowlingStyle :<span class="">{{playerDetail.bowlingStyle}}</span></h5>
+                </span>
+          </mat-card-content>
+       </mat-card>
+
+       <div id="ODis">
+         <mat-card id="bowling"  class="player-thumbnail">
+            <h2>ODI Career</h2>
+            <mat-card-content>
+                <h4  class="">ODI Bowling</h4>
+            <span>
+              <h5> Runs : <span class="">{{playerDetail.data.bowling.ODIs.Runs}}</span> </h5>
+            </span>
+            <span>
+              <h5>Balls : <span class="">{{playerDetail.data.bowling.ODIs.Balls}}</span></h5>
+            </span>
+            <span>
+              <h5>Inns : <span class="">{{playerDetail.data.bowling.ODIs.Inns}}</span></h5>
+            </span>
+            <span>
+              <h5>Matches : <span class="">{{playerDetail.data.bowling.ODIs.Mat}}</span></h5>
+            </span>
+            <span>
+              <h5>Ave : <span class="">{{playerDetail.data.bowling.ODIs.Ave}}</span></h5>
+            </span>
+            <span>
+              <h5>wickets : <span class="">{{playerDetail.data.bowling.ODIs.Wkts}}</span></h5>
+            </span>
+          </mat-card-content>
+         </mat-card>
+
+         <mat-card id="batting" class="player-thumbnail">
+            <mat-card-content>
+                <h4 class="">ODI Batting :</h4>
+            <span>
+              <h5> Runs : <span class="">{{playerDetail.data.batting.ODIs.Runs}}</span> </h5>
+            </span>
+            <!-- <h5>Balls : {{playerDetail.data.batting.ODIs.Balls}}</h5> -->
+            <span>
+              <h5>Inns :<span class="">{{playerDetail.data.batting.ODIs.Inns}}</span></h5>
+            </span>
+            <span>
+              <h5>Matches :<span class="">{{playerDetail.data.batting.ODIs.Mat}}</span></h5>
+            </span>
+            <span>
+              <h5>Ave : <span class="">{{playerDetail.data.batting.ODIs.Ave}}</span></h5>
+            </span>
+            <span>
+              <h5>HS : <span class="">{{playerDetail.data.batting.ODIs.HS}}</span></h5>
+            </span>
+            <span>
+              <h5>Strike rate : <span class="">{{playerDetail.data.batting.ODIs.SR}}</span></h5>
+            </span>
+          </mat-card-content>
+         </mat-card>
+       </div>
+
+       <div id="tests">
+        <mat-card class="player-thumbnail">
+            <h2>Test Career</h2>
+            <mat-card-content>
+                <h4 class="card-title">Tests Bowling :</h4>
+            <span>
+              <h5> Runs : <span class="">{{playerDetail.data.bowling.tests.Runs}}</span> </h5>
+            </span>
+            <span>
+              <h5>Balls : <span class="">{{playerDetail.data.bowling.tests.Balls}}</span></h5>
+            </span>
+            <span>
+              <h5>Inns : <span class="">{{playerDetail.data.bowling.tests.Inns}}</span></h5>
+            </span>
+            <span>
+              <h5>Matches :<span class=""> {{playerDetail.data.bowling.tests.Mat}}</span></h5>
+            </span>
+            <span>
+              <h5>Ave : <span class="">{{playerDetail.data.bowling.tests.Ave}}</span></h5>
+            </span>
+            <span>
+              <h5>wickets : <span class="">{{playerDetail.data.bowling.tests.Wkts}}</span></h5>
+            </span>
+          </mat-card-content>
+       
+        </mat-card>
+
+        <mat-card class="player-thumbnail">
+            <mat-card-content>
+
+            <h4 class="">Tests Batting Details:</h4>
+                    <span>
+                      <h5> Runs : <span class="">{{playerDetail.data.batting.tests.Runs}}</span> </h5>
+                    </span>
+                    <span>
+                      <h5>Strike rate : <span class="">{{playerDetail.data.batting.tests.SR}}</span></h5>
+                    </span>
+                    <span>
+                      <h5>Inns :<span class="">{{playerDetail.data.batting.tests.Inns}}</span></h5>
+                    </span>
+                    <span>
+                      <h5>Matches :<span class=""> {{playerDetail.data.batting.tests.Mat}}</span></h5>
+                    </span>
+                    <span>
+                      <h5>Ave :<span class=""> {{playerDetail.data.batting.tests.Ave}}</span></h5>
+                    </span>
+                    <span>
+                      <h5>HS : <span class="">{{playerDetail.data.batting.tests.HS}}</span></h5>
+                    </span>
+                  </mat-card-content>
+        </mat-card>
+       
+       </div>
+
+
+
+
+
+
+
+
+       <div id="T20">
+        <mat-card class="player-thumbnail" >
+            <h2>T20 Career</h2>
+            <mat-card-content>
+            <h4 class="card-title">T20 Bowling :</h4>
+            <span>
+              <h5> Runs : <span class="">{{playerDetail.data.bowling.T20Is.Runs}}</span> </h5>
+            </span>
+            <span>
+              <h5>Balls : <span class="">{{playerDetail.data.bowling.T20Is.Balls}}</span></h5>
+            </span>
+            <span>
+              <h5>Inns : <span class="">{{playerDetail.data.bowling.T20Is.Inns}}</span></h5>
+            </span>
+            <span>
+              <h5>Matches :<span class=""> {{playerDetail.data.bowling.T20Is.Mat}}</span></h5>
+            </span>
+            <span>
+              <h5>Ave : <span class="">{{playerDetail.data.bowling.T20Is.Ave}}</span></h5>
+            </span>
+            <span>
+              <h5>wickets : <span class="">{{playerDetail.data.bowling.T20Is.Wkts}}</span></h5>
+            </span>
+          </mat-card-content>
+         
+        </mat-card>
+
+        <mat-card class="player-thumbnail">
+            <mat-card-content >
+            <h4 class="" >T20 Batting Details:</h4>
+                    <span>
+                      <h5> Runs : <span class="">{{playerDetail.data.batting.T20Is.Runs}}</span> </h5>
+                    </span>
+                    <span>
+                      <h5>Strike rate : <span class="">{{playerDetail.data.batting.T20Is.SR}}</span></h5>
+                    </span>
+                    <span>
+                      <h5>Inns :<span class="">{{playerDetail.data.batting.T20Is.Inns}}</span></h5>
+                    </span>
+                    <span>
+                      <h5>Matches :<span class=""> {{playerDetail.data.batting.T20Is.Mat}}</span></h5>
+                    </span>
+                    <span>
+                      <h5>Ave :<span class=""> {{playerDetail.data.batting.T20Is.Ave}}</span></h5>
+                    </span>
+                    <span>
+                      <h5>HS : <span class="">{{playerDetail.data.batting.T20Is.HS}}</span></h5>
+                    </span>
+                  </mat-card-content>
+            
+        </mat-card>
+       </div>
+
+      </div>
+
+

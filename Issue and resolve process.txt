@@ -1,0 +1,20 @@
+Issue:1
+CORS error while getting data from api.
+
+Resolve- Use chrome.exe --user-data-dir="C:/Chrome dev session" --disable-web-security to run code.
+
+Issue:2
+Responsive 
+
+Resolve: Use media query
+
+Issue:3
+Navbar Problem
+
+Resolve: Use Mat tool bar
+
+Issue:4 
+repository test error
+
+Resolve: @After and delete all
+
