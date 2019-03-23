@@ -11,7 +11,7 @@
         <i class="material-icons" style="font-size:25px;color:rgb(132, 110, 150)">launch</i>
       </button>
     <button *ngIf="!useWatchlistApi" mat-button (click)="addToWatchlist()" id="add-button" color="primary">
-       <span style="font-size:18px">Add Favourite</span>
+       <span style="font-size:12px">Add Favourite</span> <i class="material-icons" style="font-size:25px;color:red">favorite</i>
       </button>
     <button id="delete" *ngIf="useWatchlistApi" mat-button (click)="deleteFromWatchlist()" class="player-button"
       color="warn"> <span style="font-size:12px">Delete</span>

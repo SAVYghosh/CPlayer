@@ -26,14 +26,13 @@ export class WatchlistComponent implements OnInit {
     this.service.getFavouritePlayers().subscribe(players => {
       console.log(players);
       this.players.push(...players);
-    },
-    (error) =>
-    {
+      if(this.players.length==0){
         this.snackBar.open(message, '', {
           duration: 1000
         });
-      
-    })
+      }
+    },
+   )
   }
 
 }

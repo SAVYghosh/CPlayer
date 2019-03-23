@@ -25,7 +25,7 @@ const testConfig = {
   }
 }
 
-describe('Register Component', () => {
+fdescribe('Register Component', () => {
   let component: RegisterComponent;
   let fixture: ComponentFixture<RegisterComponent>;
   let authService: AuthenticationService;
